@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.contact {
+
+    position: relative;
+    min-height: 100vh; /*koliko je stranica siroka i visoka dal ima/treba scroll il ne*/
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.466),rgba(0, 0, 0, 0.226)),url(ContactBackground.jpg);
+    background-size: cover;
+}
+
+.contact .content {
+
+  max-width: 800px; /*max koliko naslov moze bit sirok*/
+  text-align: center;
+}
+
+.contact .content h2{
+
+  font-size: 80px; /*koliko je Contact Me veliko*/
+  font-weight: 159; /*koliko je Contact Me debelo*/
+  color: #fff;
+}
+
+.contact .content p{
+
+  font-weight: 170;
+  color: #fff;
+}
+
+.container {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contain .contactInfo {
+
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+
+  position: relative;
+  padding: 30px 50px; /*razmak izmedu ikona sa tekstom i boxa bijelog*/
+  display: flex;
+
+}
+
+.container .contactInfo .box .icon {
+
+  min-width: 60px;/*promjer kruga za ikone*/
+  height: 60px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px ; /*velicina ikona*/
+}
+
+.container .contactInfo .box .text {
+
+  display: flex;
+  margin-left: 30px; /*udaljenost ikona od teksta povezanih s njima*/
+  font-size: 18px; /*font teksta pored ikona*/
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  font-weight: 300; /*debljina slova pored ikona*/
+
+}
+
+.container .contactInfo .box .text h3 {
+
+  font-weight: 500;/*debljina plavih slova iznad teksta pored ikona*/
+  color: #cf0e48;
+}
+
+.contactForm {
+
+  width: 30%; /*sirina boxa*/
+  padding: 40px; /*visina boxa ajmo rec jer tekst bude u sredini kao*/
+  background:#cf0e4888 ; /*boja boxa*/
+}
+
+.contactForm h2{
+
+  font-size: 40px;
+  color: rgb(204, 193, 193);
+  font-weight: 450;
+}
+
+.contactForm .inputBox {
+
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+
+  width: 100%;
+  padding: 50px 0px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span, 
+.contactForm .inputBox input:valid ~ span, 
+.contactForm .inputBox textarea:focus ~ span, 
+.contactForm .inputBox textarea:valid ~ span 
+{
+
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width:991px){
+
+  .contact
+  {
+    padding: 50px;
+  }
+  .container
+  {
+    flex-direction: column;
+  }
+  .container .contactInfo
+  {
+     margin-bottom: 40px;
+  }
+  .container .contactInfo,
+  .contactForm
+  {
+     width: 100%;
+  }
+}
